@@ -1,0 +1,69 @@
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+class Item {
+    String name;
+    double price;
+    int quantity;
+
+    public Item(String name, double price, int quantity) {
+        this.name = name;
+        this.price = price;
+        this.quantity = quantity;
+    }
+}
+
+public class PrelimHandsOnExam {
+    private static Map<String, Item> inventory = new HashMap<>();
+    private static Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        while (true) {
+            System.out.println("Inventory Management System");
+            System.out.println("1. Add Item");
+            System.out.println("2. Set Quantity");
+            System.out.println("3. Display Inventory");
+            System.out.println("4. Exit");
+            System.out.print("Enter your choice: ");
+
+            int choice = scanner.nextInt();
+            scanner.nextLine(); // Consume newline
+
+            switch (choice) {
+                case 1:
+                    addItem();
+                    break;
+                case 2:
+                    setQuantity();
+                    break;
+                case 3:
+                    displayInventory();
+                    break;
+                case 4:
+                    System.out.println("Exiting... Thank you!");
+                    return;
+                default:
+                    System.out.println("Invalid choice. Please try again.");
+            }
+        }
+    }
+
+    private static void addItem() {
+        System.out.print("Enter item name: ");
+        String name = scanner.nextLine();
+
+        if (inventory.containsKey(name)) {
+            System.out.println("Item already exists.");
+        } else {
+            System.out.print("Enter item price: ");
+            double price = scanner.nextDouble();
+            System.out.print("Enter item quantity: ");
+            int quantity = scanner.nextInt();
+            scanner.nextLine(); // Consume newline
+
+            inventory.put(name, new Item(name, price, quantity));
+            System.out.println("Item added successfully.");
+        }
+    }
+
