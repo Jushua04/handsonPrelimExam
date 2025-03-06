@@ -1,0 +1,59 @@
+<html>
+<head>
+<title>PrelimHandsonExam_2ndSem_Sanchezz.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #fb4934;}
+.s1 { color: #fbf1c7;}
+.s2 { color: #ebdbb2;}
+.s3 { color: #f8e1aa;}
+.s4 { color: #b8bb26;}
+.s5 { color: #d3869b;}
+</style>
+</head>
+<body bgcolor="#1d2021">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+PrelimHandsonExam_2ndSem_Sanchezz.java</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">util</span><span class="s2">.</span><span class="s1">Scanner</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">util</span><span class="s2">.</span><span class="s1">HashMap</span><span class="s2">;</span>
+<span class="s0">public class </span><span class="s1">PrelimHandsonExam_2ndSem_Sanchezz </span><span class="s3">{</span>
+    <span class="s0">static </span><span class="s1">HashMap</span><span class="s2">&lt;</span><span class="s1">String</span><span class="s2">,</span><span class="s1">HashMap</span><span class="s2">&lt;</span><span class="s1">Double</span><span class="s2">,</span><span class="s1">Integer</span><span class="s2">&gt;&gt; </span><span class="s1">Inventory </span><span class="s2">= </span><span class="s0">new </span><span class="s1">HashMap</span><span class="s2">&lt;&gt;</span><span class="s3">()</span><span class="s2">;</span>
+    <span class="s0">static </span><span class="s1">Scanner scanner </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Scanner </span><span class="s3">(</span><span class="s1">System</span><span class="s2">.</span><span class="s1">in</span><span class="s3">)</span><span class="s2">;</span>
+    <span class="s0">static void </span><span class="s1">addItem</span><span class="s3">() {</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s3">(</span><span class="s4">&quot;Enter item name: &quot;</span><span class="s3">)</span><span class="s2">;</span>
+        <span class="s1">string itemName </span><span class="s2">= </span><span class="s1">scanner</span><span class="s2">.</span><span class="s1">nextLine</span><span class="s3">()</span><span class="s2">;</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s3">(</span><span class="s4">&quot;Enter item price: &quot;</span><span class="s3">)</span><span class="s2">;</span>
+        <span class="s0">double </span><span class="s1">itemPrice </span><span class="s2">= </span><span class="s1">Double</span><span class="s2">.</span><span class="s1">parseDouble</span><span class="s3">(</span><span class="s1">scanner</span><span class="s2">.</span><span class="s1">hasNextLine</span><span class="s3">())</span><span class="s2">;</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s3">(</span><span class="s4">&quot;Enter item quantity: &quot;</span><span class="s3">)</span><span class="s2">;</span>
+        <span class="s0">int </span><span class="s1">itemQuantity </span><span class="s2">= </span><span class="s1">Integer</span><span class="s2">.</span><span class="s1">parseInt</span><span class="s3">(</span><span class="s1">scanner</span><span class="s2">.</span><span class="s1">nextLine</span><span class="s3">())</span><span class="s2">;</span>
+        <span class="s1">HashMap</span><span class="s2">&lt;</span><span class="s1">Double</span><span class="s2">, </span><span class="s1">Integer</span><span class="s2">&gt; </span><span class="s1">hashHolder </span><span class="s2">= </span><span class="s0">new </span><span class="s1">HashMap</span><span class="s2">&lt;&gt;</span><span class="s3">()</span><span class="s2">;</span>
+        <span class="s1">inventory</span><span class="s2">.</span><span class="s1">put</span><span class="s3">(</span><span class="s1">itemName</span><span class="s2">, </span><span class="s1">hashHolder</span><span class="s3">)</span><span class="s2">;</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s3">()</span><span class="s2">;</span>
+    <span class="s3">}</span>
+    <span class="s0">static void </span><span class="s1">setQuantity</span><span class="s3">(){</span>
+        <span class="s0">double </span><span class="s1">priceHolder </span><span class="s2">= </span><span class="s5">0</span><span class="s2">;</span>
+        <span class="s0">int </span><span class="s1">quantityHolder </span><span class="s2">= </span><span class="s5">0</span><span class="s2">;</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s3">(</span><span class="s4">&quot;Enter item name: &quot;</span><span class="s3">)</span><span class="s2">;</span>
+        <span class="s1">string itemName </span><span class="s2">= </span><span class="s1">scanner</span><span class="s2">.</span><span class="s1">nextLine</span><span class="s3">()</span><span class="s2">;</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s3">(</span><span class="s4">&quot;Enter new quantity: &quot;</span><span class="s3">)</span><span class="s2">;</span>
+        <span class="s0">int </span><span class="s1">setQuantity </span><span class="s2">= </span><span class="s1">Integer</span><span class="s2">.</span><span class="s1">parseInt</span><span class="s3">(</span><span class="s1">scanner</span><span class="s2">.</span><span class="s1">nextLine</span><span class="s3">())</span><span class="s2">;</span>
+        <span class="s0">if </span><span class="s3">(</span><span class="s1">inventory</span><span class="s2">.</span><span class="s1">containsKey</span><span class="s3">(</span><span class="s1">itemName</span><span class="s3">)){</span>
+            <span class="s1">priceHolder </span><span class="s2">= </span><span class="s1">j</span><span class="s2">;</span>
+            <span class="s1">quantityHolder </span><span class="s2">= </span><span class="s1">setQuantity</span><span class="s2">;</span>
+            <span class="s1">hashHolder</span><span class="s2">.</span><span class="s1">put</span><span class="s3">(</span><span class="s1">priceHolder</span><span class="s2">,</span><span class="s1">quantityHolder</span><span class="s3">)</span><span class="s2">;</span>
+            <span class="s1">inventory</span><span class="s2">.</span><span class="s1">put</span><span class="s3">(</span><span class="s1">itemName</span><span class="s2">,</span><span class="s1">hashHolder</span><span class="s3">)</span><span class="s2">;</span>
+
+
+
+        <span class="s3">}</span>
+    <span class="s3">}</span>
+<span class="s3">}</span>
+
+
+
+</pre>
+</body>
+</html>
